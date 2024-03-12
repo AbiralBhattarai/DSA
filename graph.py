@@ -9,13 +9,11 @@ class Graph:
     def add_edge(self, vertex1, vertex2):
         if vertex1 in self.graph and vertex2 in self.graph:
             self.graph[vertex1].append(vertex2)
-            self.graph[vertex2].append(vertex1)  # Uncomment this line if the graph is undirected
-
+            self.graph[vertex2].append(vertex1) 
     def display(self):
         for vertex in self.graph:
             print(vertex, "-->", " ".join(map(str, self.graph[vertex])))
 
-# Example usage:
 g = Graph()
 g.add_vertex(0)
 g.add_vertex(1)
